@@ -6,7 +6,7 @@
 /*   By: rmakoni <rmakoni@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 13:32:17 by rmakoni           #+#    #+#             */
-/*   Updated: 2025/07/23 13:46:10 by rmakoni          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:59:22 by rmakoni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void personal_tests()
 int main()
 {
     Span sp = Span(5);
+    sp.addNumber(17);
     sp.addNumber(6);
     sp.addNumber(3);
-    sp.addNumber(17);
     sp.addNumber(9);
     sp.addNumber(11);
     std::cout << sp.shortestSpan() << std::endl;

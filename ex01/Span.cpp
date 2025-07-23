@@ -6,7 +6,7 @@
 /*   By: rmakoni <rmakoni@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 13:33:50 by rmakoni           #+#    #+#             */
-/*   Updated: 2025/07/23 13:44:32 by rmakoni          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:58:12 by rmakoni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,7 @@ int Span::longestSpan()
     if (_vec.size() < 2)
         throw std::runtime_error("Not enough numbers to find longest span");
     
-    int longest = _vec[_vec.size() - 1] - _vec[0];
-    for (size_t i = 0; i < _vec.size() - 1; i++)
-    {
-        if (_vec[i + 1] - _vec[i] > longest)
-            longest = _vec[i + 1] - _vec[i];
-    }
-    return longest;
+    int largest = *std::max_element(_vec.begin(), _vec.end());
+    int smallest = *std::min_element(_vec.begin(), _vec.end());
+    return largest - smallest;
 }
